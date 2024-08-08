@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .mobile-container {
+    max-width: 100%; /* Masaüstü görünümü için genişlik sınırlaması kaldırıldı */
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav #myLinks {
+    display: block; /* Masaüstü görünümü için gösterilecek şekilde ayarlandı */
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    float: left; /* Masaüstünde menü öğelerini yatay dizmek için kullanıldı */
+  }
+  
+  .topnav a.icon {
+    display: none; /* Masaüstü görünümünde hamburger menü gizlendi */
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Mobil versiyon için medya sorgusu */
+  @media screen and (max-width: 480px) {
+    .topnav a {
+      float: none; /* Mobilde menü öğeleri dikey dizilecek */
+      display: block;
+      text-align: left;
+    }
+    .topnav a.icon {
+      display: block; /* Mobilde hamburger menü gösterilecek */
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav #myLinks {
+      display: none; /* Mobilde menü öğeleri gizlenecek */
+    }
+  }
